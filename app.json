@@ -1,0 +1,64 @@
+{
+  "expo": {
+    "name": "ReExpoApp",
+    "android": {
+      "googleServicesFile": "./google-services.json",
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "READ_MEDIA_IMAGES",
+        "READ_CONTACTS",
+        "POST_NOTIFICATIONS",
+        "VIBRATE",
+        "SCHEDULE_EXACT_ALARM",
+        "RECEIVE_BOOT_COMPLETED",
+        "WAKE_LOCK"
+      ]
+    },
+    "ios": {
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app needs access to the camera.",
+        "NSMicrophoneUsageDescription": "This app needs access to the microphone.",
+        "NSLocationWhenInUseUsageDescription": "This app needs access to your location while in use.",
+        "NSPhotoLibraryUsageDescription": "This app needs access to your photo library.",
+        "NSContactsUsageDescription": "This app needs access to your contacts.",
+        "UIBackgroundModes": ["audio", "picture-in-picture"]
+      }
+    },
+    "plugins": [
+      "@react-native-firebase/app",
+      "@react-native-firebase/crashlytics",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static",
+            "buildReactNativeFromSource": true
+          },
+          "android": {
+            "extraMavenRepos": [
+              "../../node_modules/@notifee/react-native/android/libs"
+            ]
+          }
+        }
+      ],
+      "./plugins/withAndroidPip",
+      "react-native-video",
+      [
+        "react-native-permissions",
+        {
+          "iosPermissions": [
+            "Camera",
+            "Microphone",
+            "LocationWhenInUse",
+            "PhotoLibrary",
+            "Contacts"
+          ]
+        }
+      ]
+    ]
+  }
+}

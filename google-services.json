@@ -1,0 +1,306 @@
+{
+  "project_info": {
+    "project_number": "39089940514",
+    "project_id": "ct-react-native-template",
+    "storage_bucket": "ct-react-native-template.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39089940514:android:f78546d956af958cf8c27b",
+        "android_client_info": {
+          "package_name": "com.codeandtheory.templatepipelinetest.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "39089940514-jnou890b677l6i3d857iu0am4ilf8km4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFEFHg8qnmAkp6hkckKJpoLnWY3kuGHJw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "39089940514-jnou890b677l6i3d857iu0am4ilf8km4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "39089940514-03f1kp8k90fk1185tk0484oe63ot8d0g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.codeandtheory.templatepipelinetest.dev"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39089940514:android:2d358f8752b8da91f8c27b",
+        "android_client_info": {
+          "package_name": "com.codeandtheory.templatepipelinetest.dist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "39089940514-jnou890b677l6i3d857iu0am4ilf8km4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFEFHg8qnmAkp6hkckKJpoLnWY3kuGHJw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "39089940514-jnou890b677l6i3d857iu0am4ilf8km4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "39089940514-03f1kp8k90fk1185tk0484oe63ot8d0g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.codeandtheory.templatepipelinetest.dev"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39089940514:android:74b43fc722aa56fef8c27b",
+        "android_client_info": {
+          "package_name": "com.codeandtheory.templaternpipeline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "39089940514-jnou890b677l6i3d857iu0am4ilf8km4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFEFHg8qnmAkp6hkckKJpoLnWY3kuGHJw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "39089940514-jnou890b677l6i3d857iu0am4ilf8km4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "39089940514-03f1kp8k90fk1185tk0484oe63ot8d0g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.codeandtheory.templatepipelinetest.dev"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39089940514:android:1dcc403df976f950f8c27b",
+        "android_client_info": {
+          "package_name": "com.codeandtheory.templaternpipeline.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "39089940514-jnou890b677l6i3d857iu0am4ilf8km4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFEFHg8qnmAkp6hkckKJpoLnWY3kuGHJw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "39089940514-jnou890b677l6i3d857iu0am4ilf8km4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "39089940514-03f1kp8k90fk1185tk0484oe63ot8d0g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.codeandtheory.templatepipelinetest.dev"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39089940514:android:f0197471eb65f0baf8c27b",
+        "android_client_info": {
+          "package_name": "com.codeandtheory.templatetestbare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "39089940514-jnou890b677l6i3d857iu0am4ilf8km4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFEFHg8qnmAkp6hkckKJpoLnWY3kuGHJw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "39089940514-jnou890b677l6i3d857iu0am4ilf8km4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "39089940514-03f1kp8k90fk1185tk0484oe63ot8d0g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.codeandtheory.templatepipelinetest.dev"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39089940514:android:8f2fedc7ccfa68b6f8c27b",
+        "android_client_info": {
+          "package_name": "com.codeandtheory.templatetestbare.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "39089940514-jnou890b677l6i3d857iu0am4ilf8km4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFEFHg8qnmAkp6hkckKJpoLnWY3kuGHJw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "39089940514-jnou890b677l6i3d857iu0am4ilf8km4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "39089940514-03f1kp8k90fk1185tk0484oe63ot8d0g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.codeandtheory.templatepipelinetest.dev"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39089940514:android:0580e80b893daa70f8c27b",
+        "android_client_info": {
+          "package_name": "com.codeandtheory.templatetestexpo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "39089940514-jnou890b677l6i3d857iu0am4ilf8km4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFEFHg8qnmAkp6hkckKJpoLnWY3kuGHJw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "39089940514-jnou890b677l6i3d857iu0am4ilf8km4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "39089940514-03f1kp8k90fk1185tk0484oe63ot8d0g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.codeandtheory.templatepipelinetest.dev"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39089940514:android:83db8fb32dd2836ef8c27b",
+        "android_client_info": {
+          "package_name": "com.codeandtheory.templatetestexpo.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "39089940514-h5cef21he05uj104999p0hdvg8gp1sfh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.codeandtheory.templatetestexpo.dev",
+            "certificate_hash": "dc7655c20fcff2049b5a1b043373060ebb9a25e1"
+          }
+        },
+        {
+          "client_id": "39089940514-jnou890b677l6i3d857iu0am4ilf8km4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFEFHg8qnmAkp6hkckKJpoLnWY3kuGHJw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "39089940514-jnou890b677l6i3d857iu0am4ilf8km4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "39089940514-03f1kp8k90fk1185tk0484oe63ot8d0g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.codeandtheory.templatepipelinetest.dev"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
