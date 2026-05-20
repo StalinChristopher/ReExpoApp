@@ -91,3 +91,96 @@ jest.mock("react-native-mmkv", () => ({
 jest.mock("expo-localization", () => ({
   getLocales: () => [{ languageTag: "en-US", languageCode: "en" }],
 }));
+
+jest.mock("@react-native-firebase/app", () => ({
+  __esModule: true,
+  default: jest.fn(() => ({ name: "[DEFAULT]" })),
+}));
+
+jest.mock("@react-native-firebase/remote-config", () => {
+  const { REMOTE_CONFIG_DEFAULTS } = require("./src/remoteConfig/remoteConfigDefaults");
+
+  return {
+    getRemoteConfig: jest.fn(() => ({})),
+    activate: jest.fn(() => Promise.resolve()),
+    onConfigUpdate: jest.fn(() => jest.fn()),
+    setConfigSettings: jest.fn(() => Promise.resolve()),
+    setDefaults: jest.fn(() => Promise.resolve()),
+    fetchAndActivate: jest.fn(() => Promise.resolve(true)),
+    getValue: jest.fn((_rc, key) => {
+      const value = REMOTE_CONFIG_DEFAULTS[key];
+      return {
+        asString: () => String(value ?? ""),
+        asBoolean: () => Boolean(value),
+        asNumber: () => Number(value ?? 0),
+      };
+    }),
+    lastFetchStatus: jest.fn(() => "success"),
+    fetchTimeMillis: jest.fn(() => Date.now()),
+  };
+});
+
+jest.mock("@react-native-firebase/analytics", () => ({
+  __esModule: true,
+  default: jest.fn(() => ({
+    logEvent: jest.fn(() => Promise.resolve()),
+    logScreenView: jest.fn(() => Promise.resolve()),
+    setUserId: jest.fn(() => Promise.resolve()),
+    setUserProperty: jest.fn(() => Promise.resolve()),
+  })),
+}));
+
+jest.mock("@react-native-firebase/messaging", () => ({
+  __esModule: true,
+  default: jest.fn(() => ({
+    getToken: jest.fn(() => Promise.resolve("mock-fcm-token")),
+    onMessage: jest.fn(() => jest.fn()),
+    onTokenRefresh: jest.fn(() => jest.fn()),
+    onNotificationOpenedApp: jest.fn(() => jest.fn()),
+    getInitialNotification: jest.fn(() => Promise.resolve(null)),
+    requestPermission: jest.fn(() => Promise.resolve(1)),
+    setBackgroundMessageHandler: jest.fn(),
+    hasPermission: jest.fn(() => Promise.resolve(true)),
+  })),
+}));
+
+jest.mock("@react-native-firebase/crashlytics", () => ({
+  __esModule: true,
+  default: jest.fn(() => ({
+    log: jest.fn(),
+    recordError: jest.fn(),
+    crash: jest.fn(),
+    setUserId: jest.fn(),
+    setAttribute: jest.fn(),
+    setAttributes: jest.fn(),
+  })),
+}));
+
+jest.mock("@notifee/react-native", () => ({
+  __esModule: true,
+  default: {
+    createChannel: jest.fn(() => Promise.resolve("default")),
+    displayNotification: jest.fn(() => Promise.resolve("notification-id")),
+    createTriggerNotification: jest.fn(() => Promise.resolve("notification-id")),
+    onForegroundEvent: jest.fn(() => jest.fn()),
+    onBackgroundEvent: jest.fn(() => jest.fn()),
+    getNotificationSettings: jest.fn(() =>
+      Promise.resolve({ authorizationStatus: 1 }),
+    ),
+    requestPermission: jest.fn(() =>
+      Promise.resolve({ authorizationStatus: 1 }),
+    ),
+    cancelNotification: jest.fn(() => Promise.resolve()),
+    cancelAllNotifications: jest.fn(() => Promise.resolve()),
+    getTriggerNotificationIds: jest.fn(() => Promise.resolve([])),
+  },
+  AndroidImportance: {
+    DEFAULT: 3,
+    HIGH: 4,
+    LOW: 2,
+    MIN: 1,
+  },
+  AndroidNotificationSetting: { ENABLED: 1 },
+  AuthorizationStatus: { AUTHORIZED: 1, DENIED: 0, NOT_DETERMINED: -1 },
+  EventType: { PRESS: 1, DISMISSED: 2, ACTION_PRESS: 3 },
+}));
