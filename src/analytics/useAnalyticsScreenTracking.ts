@@ -14,7 +14,8 @@ import { logScreenView } from "./analytics";
  * ```
  */
 export function useAnalyticsScreenTracking() {
-  const navigationRef = useRef<NavigationContainerRef<RootStackParamList>>(null);
+  const navigationRef =
+    useRef<NavigationContainerRef<RootStackParamList>>(null);
   const routeNameRef = useRef<string | undefined>(undefined);
 
   const onReady = useCallback(() => {
