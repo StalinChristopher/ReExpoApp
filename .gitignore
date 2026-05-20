@@ -60,3 +60,9 @@ DerivedDataCI/
 TestResults.xcresult
 *.xcresult
 Reports/
+google-services.json
+GoogleService-Info.plist
+**/google-services.json
+**/GoogleService-Info.plist
+!google-services.json.example
+!GoogleService-Info.plist.example

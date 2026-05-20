@@ -1,0 +1,15 @@
+{
+  "android": [
+    "google-services.json",
+    "android/app/google-services.json"
+  ],
+  "ios": {
+    "dev": [
+      "GoogleService-Info.plist",
+      "ios/ReExpoAppDev/GoogleService-Info.plist"
+    ],
+    "dist": [
+      "GoogleService-Info.plist"
+    ]
+  }
+}

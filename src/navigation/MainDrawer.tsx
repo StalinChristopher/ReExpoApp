@@ -117,7 +117,10 @@ export function MainDrawer() {
       <Drawer.Screen
         name="CrashLoggerDemo"
         component={CrashLoggerDemoScreen}
-        options={{ title: "Crash Logger demo", drawerLabel: "Crash Logger demo" }}
+        options={{
+          title: "Crash Logger demo",
+          drawerLabel: "Crash Logger demo",
+        }}
       />
     </Drawer.Navigator>
   );

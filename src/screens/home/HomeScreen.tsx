@@ -51,8 +51,8 @@ export function HomeScreen({ navigation }: Props) {
         <Text style={styles.title}>{t("home.title")}</Text>
         <Text style={styles.caption}>{t("home.caption")}</Text>
         <Text style={styles.caption}>
-          Media player (drawer): HLS / DRM demos, download queue with notifications,
-          offline MP4 playback, and PiP.
+          Media player (drawer): HLS / DRM demos, download queue with
+          notifications, offline MP4 playback, and PiP.
         </Text>
 
         <Pressable
