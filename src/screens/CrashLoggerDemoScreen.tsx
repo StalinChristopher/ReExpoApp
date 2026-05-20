@@ -137,11 +137,7 @@ export function CrashLoggerDemoScreen() {
     <ScrollView style={styles.scroll} contentContainerStyle={styles.content}>
       <Text style={styles.title}>Crash Logger demo</Text>
       <Text style={styles.caption}>
-        Exercises the ICrashLoggerProvider abstraction (backed by Firebase
-        Crashlytics). Non-fatal actions appear in the Crashlytics dashboard
-        within a few minutes. Use "Throw JS error" to test the full pipeline in
-        any build; use "Native crash" only in a release build — it is a no-op in
-        debug.
+        {`Exercises the ICrashLoggerProvider abstraction (backed by Firebase Crashlytics). Non-fatal actions appear in the Crashlytics dashboard within a few minutes. Use "Throw JS error" to test the full pipeline in any build; use "Native crash" only in a release build — it is a no-op in debug.`}
       </Text>
 
       <Text style={styles.sectionHeader}>Non-fatal reporting</Text>

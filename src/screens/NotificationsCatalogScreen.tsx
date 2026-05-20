@@ -291,8 +291,7 @@ export function NotificationsCatalogScreen() {
 
         <View style={styles.section}>
           <Text style={styles.infoText}>
-            To test push notifications from a backend, use your Firebase Console
-            to send a message to this device's FCM token.
+            {`To test push notifications from a backend, use your Firebase Console to send a message to this device's FCM token.`}
           </Text>
           <Text style={[styles.infoText, styles.infoTextSpacing]}>
             {`To test deep links on iOS Simulator: Run \`xcrun simctl openurl booted ${deepLinkSchemePrefix}home\` in Terminal.`}
