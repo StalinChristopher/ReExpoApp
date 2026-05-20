@@ -100,7 +100,7 @@ jobs:
     with:
       branch: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
       firebase_android_app: dev
-      gradle_task: assembleReExpoAppDevRelease
+      gradle_task: assembleRelease
       artifact_glob: app/build/outputs/apk/release/*.apk
       release_notes: ""
       dry_run: false

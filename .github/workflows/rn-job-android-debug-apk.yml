@@ -31,7 +31,7 @@ jobs:
           key: gradle-${{ runner.os }}-${{ hashFiles('android/**/*.gradle*', 'android/gradle/wrapper/gradle-wrapper.properties') }}
       - name: Assemble debug
         working-directory: android
-        run: ./gradlew assembleReExpoAppDevDebug --no-daemon
+        run: ./gradlew assembleDebug --no-daemon
       - uses: actions/upload-artifact@v4
         with:
           name: ${{ inputs.artifact_name }}

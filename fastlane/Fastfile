@@ -26,7 +26,7 @@ platform :ios do
       next_build = latest.to_i + 1
       increment_build_number(
         build_number: next_build.to_s,
-        xcodeproj: "ios/ReExpoAppReExpoAppDev.xcodeproj"
+        xcodeproj: "ios/ReExpoAppDev.xcodeproj"
       )
       UI.success("Set CFBundleVersion to #{next_build} (latest TestFlight was #{latest.to_i})")
     end
@@ -48,11 +48,11 @@ platform :ios do
 
     bc = ENV["IOS_BUILD_CONFIGURATION"]
     gym_args = {
-      workspace: "ios/ReExpoAppReExpoAppDev.xcworkspace",
-      scheme: ENV.fetch("IOS_SCHEME", "ReExpoAppReExpoAppDev"),
+      workspace: "ios/ReExpoAppDev.xcworkspace",
+      scheme: ENV.fetch("IOS_SCHEME", "ReExpoAppDev"),
       export_method: export_method,
       output_directory: "build",
-      output_name: "ReExpoAppReExpoAppDev.ipa",
+      output_name: "ReExpoAppDev.ipa",
       clean: true,
       xcargs: xcargs,
       export_options: {

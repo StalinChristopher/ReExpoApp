@@ -6,7 +6,7 @@ on:
     inputs:
       ios_workspace:
         type: string
-        default: ios/ReExpoAppReExpoAppDev.xcworkspace
+        default: ios/ReExpoAppDev.xcworkspace
       ios_scheme:
         type: string
         default: ReExpoAppDev

@@ -28,17 +28,17 @@ on:
         description: "Xcode scheme used by Fastlane gym"
         type: string
         required: false
-        default: ReExpoAppReExpoAppDev
+        default: ReExpoAppDev
       ios_build_configuration_dev:
-        description: "Xcode build configuration for dev Firebase builds (CT flavor default Debug-ReExpoAppDev)"
+        description: "Xcode build configuration for dev Firebase builds (CT flavor default Debug)"
         type: string
         required: false
-        default: Debug-ReExpoAppDev
+        default: Debug
       ios_build_configuration_dist:
-        description: "Xcode build configuration for dist Firebase builds (CT flavor default Release-ReExpoAppReExpoAppDev)"
+        description: "Xcode build configuration for dist Firebase builds (CT flavor default Release)"
         type: string
         required: false
-        default: Release-ReExpoAppReExpoAppDev
+        default: Release
       firebase_groups:
         description: Comma-separated Firebase App Distribution tester groups
         type: string
@@ -154,8 +154,8 @@ jobs:
             echo "::error::Provisioning profile App ID \"${PROFILE_BUNDLE}\" does not match APP_IDENTIFIER \"${EXPECTED_BUNDLE}\". Regenerate DIST_PROFILE_BASE64 (or dev profile) for the correct bundle ID in Apple ReExpoAppDeveloper."
             exit 1
           fi
-          mkdir -p ~/Library/MobileReExpoAppDevice/Provisioning\ Profiles
-          cp "$PROFILE_PATH" ~/Library/MobileReExpoAppDevice/Provisioning\ Profiles/"$UUID.mobileprovision"
+          mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
+          cp "$PROFILE_PATH" ~/Library/MobileDevice/Provisioning\ Profiles/"$UUID.mobileprovision"
           echo "IOS_PROVISIONING_PROFILE_NAME<<EOF" >> $GITHUB_ENV
           echo "$PROFILE_NAME" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
@@ -183,7 +183,7 @@ jobs:
           printf '%s' "$SERVICE_ACCOUNT_JSON" > "$RUNNER_TEMP/firebase-sa.json"
           chmod 600 "$RUNNER_TEMP/firebase-sa.json"
           export GOOGLE_APPLICATION_CREDENTIALS="$RUNNER_TEMP/firebase-sa.json"
-          CMD=(npx --yes firebase-tools@13 appdistribution:distribute "build/ReExpoAppReExpoAppDev.ipa" --app "$FIREBASE_APP_ID" --groups "$GROUPS")
+          CMD=(npx --yes firebase-tools@13 appdistribution:distribute "build/ReExpoAppDev.ipa" --app "$FIREBASE_APP_ID" --groups "$GROUPS")
           if [ -n "${RELEASE_NOTES:-}" ]; then
             CMD+=(--release-notes "$RELEASE_NOTES")
           fi
@@ -191,7 +191,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: ios-firebase-${{ inputs.firebase_ios_app }}-${{ github.run_number }}
-          path: build/ReExpoAppReExpoAppDev.ipa
+          path: build/ReExpoAppDev.ipa
           if-no-files-found: warn
       - name: Notify Slack (workflow webhook)
         if: ${{ inputs.dry_run == false && inputs.upload_to_firebase && steps.upload_firebase.outcome == 'success' }}

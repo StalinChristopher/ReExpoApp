@@ -15,7 +15,7 @@ on:
       gradle_task:
         required: false
         type: string
-        default: assembleReExpoAppReExpoAppDevRelease
+        default: assembleRelease
       gradle_project_dir:
         required: false
         type: string
@@ -85,7 +85,7 @@ jobs:
             exit 1
           fi
 
-          # Derive flavor: assembleReExpoAppDevRelease → dev, assembleReExpoAppReExpoAppDevRelease → prod
+          # Derive flavor: assembleRelease → dev, assembleRelease → prod
           FLAVOR=$(echo "$TASK" | sed 's/^assemble//;s/Release$//;s/Debug$//' | tr '[:upper:]' '[:lower:]')
 
           # POSIX-friendly: Ubuntu default awk (mawk) does not support \b / \s used in earlier patterns.

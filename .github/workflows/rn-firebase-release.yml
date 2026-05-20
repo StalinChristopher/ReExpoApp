@@ -96,7 +96,7 @@ jobs:
     with:
       branch: ${{ inputs.branch }}
       firebase_android_app: dev
-      gradle_task: assembleReExpoAppDevRelease
+      gradle_task: assembleRelease
       artifact_glob: app/build/outputs/apk/release/*.apk
       release_notes: ${{ inputs.release_notes }}
       dry_run: ${{ inputs.dry_run }}
@@ -113,7 +113,7 @@ jobs:
       branch: ${{ inputs.branch }}
       firebase_ios_app: dist
       app_identifier: com.codeandtheory.templatepipelinetest
-      ios_scheme: ReExpoAppReExpoAppDev
+      ios_scheme: ReExpoAppDev
       dry_run: ${{ inputs.dry_run }}
       firebase_groups: ${{ inputs.firebase_groups }}
       release_notes: ${{ inputs.release_notes }}
